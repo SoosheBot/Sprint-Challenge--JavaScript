@@ -35,10 +35,19 @@ Edit this document to include your answers after each question. Make sure to lea
     They're both pretty similar, really, but their difference is in scope. Also methods are functions which are properties of objects.
 
 3. What is closure?
+    A closure is a function that can access the 'lexical environment within which that function was declared'. What that means is that a closure function can declare a local variable inside a parent function, nest a child function inside its parent, and then the child can access its own function's variables, as well as the parent's variables. The child always maintains a reference to what its parent function has!
 
 4. Describe the four rules of the 'this' keyword.
+        Rule1: Global Binding -- When a function gets called without a defined context, the 'this' of the function will default to the global cope -- the global window Object. 
+
+        Rule2: Implicit Binding -- When a function gets called, the value of the 'this' of a function depends on how the function is called. It is bound to the function's behavior. It's the most commonly used application of 'this' and whenever a function is called with a dot before it, the object before said dot is the 'this'.
+
+        Rule3: New Binding -- Whenever we use a constructor function, the 'this' will refer to a specific instance on an object created and returned by the constructor function.
+
+        Rule4: Explicit Binding -- Whenever we use JS' call or apply methods, 'this' is explictly defined by said methods.
 
 5. Why do we need super() in an extended class?
+        We need super() in an extended class to access and call functions on an object's parents.
 
 ## Project Set up
 
